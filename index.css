@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  background-size: 400% 400%;
+  animation: darkGradientShift 20s ease infinite;
+}
+
+/* Dark gradient cycle */
+@keyframes darkGradientShift {
+  0% {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+  }
+  25% {
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+  }
+  50% {
+    background: linear-gradient(-45deg, #0d0d0d, #1f1c2c, #2c2c54, #0d0d0d);
+  }
+  75% {
+    background: linear-gradient(-45deg, #1b2735, #090a0f, #1b2735, #090a0f);
+  }
+  100% {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #00ffe7;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00ffe7;
+  text-shadow: 0 0 10px #00ffe7;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00ffe7;
+  text-shadow: 0 0 5px #00ffe7;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #00ffe7;
+  text-shadow: 0 0 20px #00ffe7;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 15px 30px;
+  background: #00ffe7;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00ffe7;
+  transition: 0.3s;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #00ffe7; }
+  50% { box-shadow: 0 0 20px #00ffe7; }
+  100% { box-shadow: 0 0 10px #00ffe7; }
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.categories {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.categories h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #00ffe7;
+}
+
+.categories h3 {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 180px;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px #00ffe7;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 2px solid #00ffe7;
+  border-radius: 20px;
+  animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px #00ffe7; }
+  50% { box-shadow: 0 0 20px #00ffe7; }
+  100% { box-shadow: 0 0 5px #00ffe7; }
+}
+
+.card:hover {
+  transform: rotate(-1deg) scale(1.05);
+  background: rgba(0,255,231,0.1);
+  box-shadow: 0 0 30px #00ffe7;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+
+/* Banner Section */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 310px;
+  flex-wrap: wrap;
+}
+.banner-left {
+  flex: 0.7;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px; /* balanced left gap */
+}
+.banner-left img {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffe7;
+}
+.banner-right {
+  flex: 1;
+  color: #fff;
+}
+.banner-right h1 {
+  font-size: 49px;
+  color: #00ffe7;
+  text-shadow: 0 0 10px #00ffe7;
+  margin-bottom: 20px;
+}
+.banner-right p {
+  font-size: 21px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #ddd;
+}
+.banner-right .btn {
+  padding: 15px 30px;
+  background: #00ffe7;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #00ffe7;
+}
+.banner-right .btn:hover {
+  background: #fff;
+  color: #000;
+}
